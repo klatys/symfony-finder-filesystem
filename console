@@ -1,0 +1,12 @@
+#!/usr/bin/env php
+<?php
+
+require_once __DIR__ . '/vendor/autoload.php';
+
+use Symfony\Component\Console\Application;
+
+$console = new Application('Symfony Console demo for Zdroják.cz', '3.7.4');
+$console->add(new App\Command\FileSystem1Command());
+$console->add(new App\Command\FileSystem2Command());
+$console->add(new App\Command\FinderCommand());
+$console->run();
